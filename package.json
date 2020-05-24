@@ -1,0 +1,47 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "A VueJS Image Browser Component with options to upload, browse, delete and select images",
+  "main": "/dist/hello-world.umd.js",
+  "module": "dist/hello-world.esm.js",
+  "unpkg": "dist/hello-world.min.js",
+  "browser": {
+    "./sfc": "src/hello-world.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "prod": "cross-env NODE_ENV=production npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/hello-world.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/hello-world.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/hello-world.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akash-mitra/hello-world.git"
+  },
+  "keywords": [
+    "vue",
+    "image",
+    "browser",
+    "gallery"
+  ],
+  "author": "Akash Mitra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akash-mitra/hello-world/issues"
+  },
+  "homepage": "https://github.com/akash-mitra/hello-world#readme",
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^12.0.0",
+    "autoprefixer": "^9.8.0",
+    "core-js": "^3.6.5",
+    "postcss": "^7.0.30",
+    "postcss-import": "^12.0.1",
+    "rollup": "^2.10.9",
+    "rollup-plugin-vue": "^5.1.9",
+    "tailwindcss": "^1.4.6",
+    "vue": "^2.6.11",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
