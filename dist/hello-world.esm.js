@@ -20,7 +20,7 @@ var script = {
 
     data: function data() {
         return {
-            name: 'World',
+            whom: 'World',
         }
     },
 
@@ -112,7 +112,7 @@ var __vue_render__ = function() {
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
   return _c("div", { class: _vm.textColorClass }, [
-    _vm._v("\n    Hello " + _vm._s(_vm.name) + "\n")
+    _vm._v("\n    Hello " + _vm._s(_vm.whom) + "\n")
   ])
 };
 var __vue_staticRenderFns__ = [];

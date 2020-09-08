@@ -2,7 +2,7 @@
     <div
         :class="textColorClass"
     >
-        Hello {{name}}
+        Hello {{whom}}
     </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 
     data() {
         return {
-            name: 'World',
+            whom: 'World',
         }
     },
 
